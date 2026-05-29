@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Gerenciamento de Permanência</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+    href="css/configuracoes.css"
+  />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="header-left">
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+
+      <div class="logo-area">
+        <img src="imagens/certo.png" alt="logo">
+
+        <div class="logo-text">
+          <h2>GestPer</h2>
+          <span>Painel Administrativo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="header-badge">
+      Usuários do Sistema
+    </div>
+
+  </header>
+
+  <!-- MENU -->
+  <nav class="side-menu" id="side-menu">
+
+    <div class="menu-title">
+      
+    </div>
+
+    <ul>
+
+      <li>
+        <a href="#" onclick="abrirRelatorios()">
+          <span>📊</span>
+          Relatórios
+        </a>
+      </li>
+
+      <li>
+        <a href="configuracoes.html">
+          <span>⚙️</span>
+          Usuários
+        </a>
+      </li>
+
+      <li>
+        <a href="upload.html">
+          <span>📁</span>
+          Arquivos
+        </a>
+      </li>
+
+      <div class="sair">
+        <li>
+          <a href="#" onclick="sair()">
+            <span>🚪</span>
+            Sair
+          </a>
+        </li>
+      </div>
+
+    </ul>
+
+  </nav>
+
+  <script src="javascript/menu.js"></script>
+
+  <!-- MODAL EDITAR -->
+  <div id="modal-editar" class="modal">
+
+    <div class="janela">
+
+      <div class="modal-top">
+        <h2>Alterar usuário</h2>
+        <p>Atualize as informações do usuário</p>
+      </div>
+
+      <input type="text" id="editar-nome" placeholder="Nome" />
+      <input type="email" id="editar-email" placeholder="Email" />
+      <input type="text" id="editar-telefone" placeholder="Telefone" />
+      <input type="text" id="editar-senha" placeholder="Senha" />
+
+      <div class="botoes-modal">
+        <button onclick="alterar_usuario()">Salvar</button>
+        <button onclick="fecharModal()">Cancelar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL ADICIONAR -->
+  <div id="modal-adicionar" class="modal">
+
+    <div class="janela">
+
+      <div class="modal-top">
+        <h2>Adicionar usuário</h2>
+        <p>Cadastre um novo usuário no sistema</p>
+      </div>
+
+      <input type="text" id="add-nome" placeholder="Nome" />
+      <input type="email" id="add-email" placeholder="Email" />
+      <input type="text" id="add-telefone" placeholder="Telefone" />
+      <input type="text" id="add-senha" placeholder="Senha" />
+
+      <div class="botoes-modal">
+        <button onclick="adicionarUsuario()">Salvar</button>
+        <button onclick="fecharModalAdicionar()">Cancelar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CONTEÚDO -->
+  <main class="page-content">
+
+    <div class="top-info">
+
+      <div>
+        <span class="mini-badge">Sistema SaaS</span>
+
+        <h1>Gerenciamento de Usuários</h1>
+
+        <p>
+          Controle completo dos usuários cadastrados na plataforma.
+        </p>
+      </div>
+
+      <button class="adicionar" onclick="abrirModalAdicionar()">
+        + Adicionar Usuário
+      </button>
+
+    </div>
+
+    <!-- TABELA -->
+    <div class="conteiner">
+
+      <div class="table-wrapper">
+
+        <table border="0" class="tabela">
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Senha</th>
+              <th>Telefone</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody id="corpo-tabela"></tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="javascript/configuracoes.js"></script>
+
+</body>
+
+</html>

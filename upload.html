@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alunos Faltosos</title>
+
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="header-content">
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+
+      <div class="logo-area">
+
+        <img src="imagens/certo.png" alt="logo">
+
+        <div class="logo-text">
+          <h2>GestPer</h2>
+          <span>Importação Acadêmica</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <nav class="side-menu" id="side-menu">
+
+    <ul>
+
+      <li>
+        <a href="#" onclick="abrirRelatorios()">
+          📊 Relatórios
+        </a>
+      </li>
+
+      <li>
+        <a href="configuracoes.html">
+          ⚙️ Usuários
+        </a>
+      </li>
+
+      <li>
+        <a href="upload.html">
+          📁 Arquivos
+        </a>
+      </li>
+
+      <div class="sair">
+
+        <li>
+          <a href="#" onclick="sair()">
+            🚪 Sair
+          </a>
+        </li>
+
+      </div>
+
+    </ul>
+
+  </nav>
+
+
+  <main class="container">
+
+    <!-- IMPORTAÇÃO -->
+    <section class="upload-card">
+
+      <div class="card-top">
+
+        <div>
+
+          <span class="mini-badge">
+            Sistema SaaS
+          </span>
+
+          <h1>Alunos Faltosos</h1>
+
+          <p>
+            Faça upload das planilhas para localizar automaticamente os alunos faltosos.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <form id="formUpload">
+
+        <div class="upload-grid">
+
+          <!-- FALTAS -->
+          <div class="upload-box">
+
+            <label>
+              Arquivo de Faltas
+            </label>
+
+            <div class="input-area" id="faltasArea">
+
+              <div class="input-icon">
+                📄
+              </div>
+
+              <div class="input-text">
+
+                <strong id="faltasNome">
+                  Selecionar arquivo
+                </strong>
+
+                <span>
+                  Planilha de faltas
+                </span>
+
+              </div>
+
+              <input
+                type="file"
+                id="faltasInput"
+                name="faltas"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- BASE -->
+          <div class="upload-box">
+
+            <label>
+              Arquivo Base
+            </label>
+
+            <div class="input-area" id="baseArea">
+
+              <div class="input-icon">
+                🗂️
+              </div>
+
+              <div class="input-text">
+
+                <strong id="baseNome">
+                  Selecionar arquivo
+                </strong>
+
+                <span>
+                  Base dos alunos
+                </span>
+
+              </div>
+
+              <input
+                type="file"
+                id="baseInput"
+                name="base"
+                required
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="buttons-area">
+
+          <button
+            type="submit"
+            class="primary-btn"
+          >
+            ⬆️ Importar Dados
+          </button>
+
+          <button
+            id="btnEmail"
+            type="button"
+            class="success-btn"
+          >
+            📩 Enviar Email para Faltosos
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- TABELA -->
+    <section class="table-card">
+
+      <div class="table-header">
+
+        <div>
+
+          <h2>Lista de Alunos</h2>
+
+          <p>
+            Dados importados automaticamente
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="table-wrapper">
+
+        <table id="tabela">
+
+          <thead>
+
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>RA</th>
+              <th>Email</th>
+              <th>Telefone</th>
+            </tr>
+
+          </thead>
+
+          <tbody></tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- JS -->
+  <script src="javascript/menu.js"></script>
+
+  <script src="javascript/upload.js"></script>
+
+</body>
+</html>

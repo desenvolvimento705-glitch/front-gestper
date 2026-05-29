@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Gestper</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="login-wrapper">
+
+        <div class="login-card">
+
+            <div class="logo-circle">
+                <img src="imagens/certo.png" alt="Logo">
+            </div>
+
+            <div class="login-top">
+                <span class="mini-badge">Sistema SaaS</span>
+
+                <h2>Sistema Gestper</h2>
+
+                <p>
+                    Plataforma de gerenciamento e cadastro de alunos
+                </p>
+            </div>
+
+            <div class="input-group">
+                <label>E-mail</label>
+
+                <div class="input-area">
+                    <span class="input-icon">✉</span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite o seu email"
+                    >
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Senha</label>
+
+                <div class="input-area">
+                    <span class="input-icon">🔒</span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Digite sua senha"
+                    >
+                </div>
+            </div>
+
+            <button onclick="efetuarLogin()">
+                Entrar no Sistema
+            </button>
+
+            <div class="error" id="erro">
+                Usuário ou senha inválidos
+            </div>
+
+            <div class="footer">
+                © 2026 Gestper • Sistema de gerenciamento escolar
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src='javascript/login.js'></script>
+
+</body>
+
+</html>
