@@ -412,3 +412,279 @@ button:hover{
     height:52px;
   }
 }
+
+/* ==================================
+   RESPONSIVIDADE GLOBAL
+================================== */
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+table{
+  width:100%;
+}
+
+input,
+button,
+select,
+textarea{
+  max-width:100%;
+}
+
+@media (max-width:1024px){
+
+  .page-content{
+      padding:0 20px;
+  }
+
+  .hero-card,
+  .conteiner{
+      border-radius:20px;
+  }
+}
+
+@media (max-width:768px){
+
+  .header{
+      height:70px;
+      padding:0 12px;
+  }
+
+  .side-menu{
+      width:85%;
+      max-width:280px;
+  }
+
+  .page-content{
+      margin-top:95px;
+      padding:0 12px;
+  }
+
+  .top-info h1,
+  .hero-card h1{
+      font-size:28px;
+  }
+
+  .top-info p,
+  .hero-card p{
+      font-size:14px;
+  }
+
+  .acoes{
+      flex-direction:column;
+      width:100%;
+  }
+
+  .acoes button{
+      width:100%;
+  }
+}
+
+@media (max-width:480px){
+
+  .logo-text{
+      display:none;
+  }
+
+  .header{
+      padding:0 10px;
+  }
+
+  .menu-btn{
+      width:42px;
+      height:42px;
+  }
+
+  .page-content{
+      padding:0 10px;
+  }
+
+  .top-info h1,
+  .hero-card h1{
+      font-size:22px;
+      line-height:1.2;
+  }
+
+  .mini-badge{
+      font-size:11px;
+  }
+
+  button,
+  .buscar,
+  .adicionar,
+  .alterar,
+  .excluir{
+      width:100%;
+      min-height:48px;
+  }
+
+  .input-group input{
+      width:100%;
+  }
+
+  .janela{
+      padding:20px;
+      border-radius:18px;
+  }
+
+  .botoes-modal{
+      flex-direction:column;
+  }
+}
+
+@media (max-width:360px){
+
+  .top-info h1,
+  .hero-card h1{
+      font-size:20px;
+  }
+
+  .tabela td,
+  table td{
+      font-size:12px;
+  }
+
+  .header{
+      height:65px;
+  }
+}
+
+/* ==================================
+   RESPONSIVIDADE GLOBAL
+================================== */
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+table{
+  width:100%;
+}
+
+input,
+button,
+select,
+textarea{
+  max-width:100%;
+}
+
+@media (max-width:1024px){
+
+  .page-content{
+      padding:0 20px;
+  }
+
+  .hero-card,
+  .conteiner{
+      border-radius:20px;
+  }
+}
+
+@media (max-width:768px){
+
+  .header{
+      height:70px;
+      padding:0 12px;
+  }
+
+  .side-menu{
+      width:85%;
+      max-width:280px;
+  }
+
+  .page-content{
+      margin-top:95px;
+      padding:0 12px;
+  }
+
+  .top-info h1,
+  .hero-card h1{
+      font-size:28px;
+  }
+
+  .top-info p,
+  .hero-card p{
+      font-size:14px;
+  }
+
+  .acoes{
+      flex-direction:column;
+      width:100%;
+  }
+
+  .acoes button{
+      width:100%;
+  }
+}
+
+@media (max-width:480px){
+
+  .logo-text{
+      display:none;
+  }
+
+  .header{
+      padding:0 10px;
+  }
+
+  .menu-btn{
+      width:42px;
+      height:42px;
+  }
+
+  .page-content{
+      padding:0 10px;
+  }
+
+  .top-info h1,
+  .hero-card h1{
+      font-size:22px;
+      line-height:1.2;
+  }
+
+  .mini-badge{
+      font-size:11px;
+  }
+
+  button,
+  .buscar,
+  .adicionar,
+  .alterar,
+  .excluir{
+      width:100%;
+      min-height:48px;
+  }
+
+  .input-group input{
+      width:100%;
+  }
+
+  .janela{
+      padding:20px;
+      border-radius:18px;
+  }
+
+  .botoes-modal{
+      flex-direction:column;
+  }
+}
+
+@media (max-width:360px){
+
+  .top-info h1,
+  .hero-card h1{
+      font-size:20px;
+  }
+
+  .tabela td,
+  table td{
+      font-size:12px;
+  }
+
+  .header{
+      height:65px;
+  }
+}

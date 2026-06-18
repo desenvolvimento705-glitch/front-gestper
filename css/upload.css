@@ -555,3 +555,39 @@
   .input-area{
     transition: 0.3s ease;
   }
+
+  @media(max-width:768px){
+
+    #tabela,
+    #tabela thead,
+    #tabela tbody,
+    #tabela th,
+    #tabela td,
+    #tabela tr{
+        display:block;
+        width:100%;
+    }
+  
+    #tabela thead{
+        display:none;
+    }
+  
+    #tabela tbody tr{
+        background:linear-gradient(180deg,var(--card),var(--card-2));
+        border-radius:20px;
+        margin-bottom:20px;
+        padding:12px;
+        border:1px solid rgba(255,255,255,.05);
+    }
+  
+    #tabela td{
+        display:flex;
+        justify-content:space-between;
+        border:none;
+        border-bottom:1px solid rgba(255,255,255,.05);
+    }
+  
+    #tabela td:last-child{
+        border-bottom:none;
+    }
+  }
