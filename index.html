@@ -2,28 +2,38 @@
 <html lang="pt-br">
 
 <head>
+
+    <!-- Configurações do PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0d6efd" />
+
+    <!-- Tags para funcionar no iPhone (iOS) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="GestPer" />
+
+    <!-- Ícones -->
+    <link rel="apple-touch-icon" href="images/icon-192.png" />
+    <link rel="icon" type="image/png" href="images/icon-192.png" />
+
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title> Gestper</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
-
-    <!-- Configurações do PWA -->
-<link rel="manifest" href="manifest.json" />
-<meta name="theme-color" content="#0d6efd" /> <!-- Cor da barra do navegador -->
-
-<!-- Tags para funcionar no iPhone (iOS) -->
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<meta name="apple-mobile-web-app-title" content="InovaWeb" />
-
-<!-- Ícones apontando para a pasta images -->
-<link rel="apple-touch-icon" href="images/icon-192.png" />
-<link rel="icon" type="image/png" href="images/icon-192.png" />
 </head>
 
 <body>
 
+    <div id="splash">
+        <img src="images/icon-512.png" alt="Gestão de Permanência">
+        <h1> GestPer </h1>
+        <p>Gestão de Permanência</p>
+
+
+
+    </div>
     <div class="background-glow"></div>
 
     <div class="login-wrapper">
@@ -40,7 +50,7 @@
                 <h2>Sistema Gestper</h2>
 
                 <p>
-                    Plataforma de gerenciamento e cadastro de alunos
+                    Plataforma de Gerenciamento e Cadastro de Alunos
                 </p>
             </div>
 
@@ -50,11 +60,7 @@
                 <div class="input-area">
                     <span class="input-icon">✉</span>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Digite o seu email"
-                    >
+                    <input type="email" id="email" placeholder="Digite o seu email">
                 </div>
             </div>
 
@@ -64,11 +70,7 @@
                 <div class="input-area">
                     <span class="input-icon">🔒</span>
 
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Digite sua senha"
-                    >
+                    <input type="password" id="password" placeholder="Digite sua senha">
                 </div>
             </div>
 
@@ -77,30 +79,40 @@
             </button>
 
             <div class="error" id="erro">
-                Usuário ou senha inválidos
+                Usuário ou Senha inválidos
             </div>
 
             <div class="footer">
-                © 2026 Gestper • Sistema de gerenciamento escolar
+                © 2026 Gestper • Sistema de Gerenciamento Escolar
             </div>
 
         </div>
 
     </div>
 
-
-
-
-
     <script src='javascript/login.js'></script>
 
     <script>
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('service-worker.js')
-            .then(() => console.log("Pronto! Seu site agora é um App."))
-            .catch((err) => console.log("Erro ao criar o App:", err));
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('Pronto! Seu site agora é um App.'))
+                .catch((err) => console.log('Erro ao criar o App:', err));
         }
-      </script>
+        
+        window.addEventListener('load', () => {
+            const splash = document.getElementById('splash');
+        
+            setTimeout(() => {
+                splash.style.opacity = '0';
+                splash.style.transition = 'opacity 0.5s ease';
+        
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                }, 500);
+        
+            }, 3000);
+        });
+        </script>
 
 </body>
 
