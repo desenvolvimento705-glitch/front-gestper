@@ -7,6 +7,19 @@
     <title> Gestper</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+
+    <!-- Configurações do PWA -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0d6efd" /> <!-- Cor da barra do navegador -->
+
+<!-- Tags para funcionar no iPhone (iOS) -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="InovaWeb" />
+
+<!-- Ícones apontando para a pasta images -->
+<link rel="apple-touch-icon" href="images/icon-192.png" />
+<link rel="icon" type="image/png" href="images/icon-192.png" />
 </head>
 
 <body>
@@ -75,7 +88,19 @@
 
     </div>
 
+
+
+
+
     <script src='javascript/login.js'></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log("Pronto! Seu site agora é um App."))
+            .catch((err) => console.log("Erro ao criar o App:", err));
+        }
+      </script>
 
 </body>
 
