@@ -8,7 +8,7 @@ async function efetuarLogin() {
     }
 
    try {
-    const response = await fetch('https://back-gestper-production.up.railway.app/autenticacao/login', {
+    const response = await fetch('back-gestper-production.up.railway.app', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, password})
