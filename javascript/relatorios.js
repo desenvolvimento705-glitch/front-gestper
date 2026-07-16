@@ -48,7 +48,7 @@ async function buscarPorData() {
       "Buscando relatório...";
 
     const url =
-      `https://backgestper-production.up.railway.app/api/relatorios?dataInicio=${dataInicio}&dataFim=${dataFim}`;
+      `https://back-gestper-production.up.railway.app/api/relatorios?dataInicio=${dataInicio}&dataFim=${dataFim}`;
 
     const resposta =
       await fetch(url);
