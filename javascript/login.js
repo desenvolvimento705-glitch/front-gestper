@@ -6,13 +6,13 @@ async function efetuarLogin() {
         alert("preencha todos os campos");
         return;
     }
-
+    
    try {
-    const response = await fetch('https://back-gestper-production.up.railway.app/login', {
+    const response = await fetch('https://back-gestper-production.up.railway.app/autenticacao/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, password})
-    });
+      body: JSON.stringify({ email, password }) 
+});
 
         const data = await response.json();
 
