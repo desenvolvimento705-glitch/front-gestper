@@ -241,7 +241,7 @@ btnEmail.addEventListener(
 
         throw new Error(
           data.mensagem ||
-          'Erro ao enviar emails'
+          'Erro Interno API Gmail'
         );
       }
 
@@ -256,7 +256,7 @@ btnEmail.addEventListener(
       console.error(erro);
 
       alert(
-        'Erro ao enviar emails.'
+        'Erro Interno API Gmail.'
       );
     }
   }
